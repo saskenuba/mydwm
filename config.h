@@ -35,7 +35,8 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Emacs",    NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "Spotify",  NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Netbeans IDE 8.2",    NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "spotify",  NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "Vlc",      NULL,       NULL,       1 << 3,       0,           -1 },
 };
 
