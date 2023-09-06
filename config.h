@@ -6,8 +6,8 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "iosevka:size=10" };
-static const char dmenufont[]       = "iosevka:size=10";
+static const char *fonts[]          = { "Cousine Nerd Font Mono:size=9" };
+static const char dmenufont[]       = "Cousine Nerd Font Mono:size=9";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "dev", "music", "4", "5", "6", "7", "8", "web" };
+static const char *tags[] = { "term", "dev", "music", "tools", "5", "6", "7", "webdev", "web" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -63,6 +63,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *zeal[]  = { "zeal", NULL};
+static const char *pavucontrol[]  = { "pavucontrol", NULL};
 
 #include "selfrestart.c"
 
@@ -71,6 +72,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_z,      spawn,          {.v = zeal } },
+    { MODKEY,                       XK_a,      spawn,          {.v = pavucontrol } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
