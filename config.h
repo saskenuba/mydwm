@@ -69,6 +69,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *zeal[]  = { "zeal", NULL};
 static const char *pavucontrol[]  = { "pavucontrol", NULL};
+static const char *blueman_applet[]  = { "blueman-applet", NULL};
 
 #include "selfrestart.c"
 
@@ -77,7 +78,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_z,      spawn,          {.v = zeal } },
-    { MODKEY,                       XK_a,      spawn,          {.v = pavucontrol } },
+        { MODKEY|ShiftMask,             XK_a,      spawn,          {.v = blueman_applet } },
+        { MODKEY,                       XK_a,      spawn,          {.v = pavucontrol } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
