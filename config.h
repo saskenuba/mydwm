@@ -70,6 +70,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *zeal[]  = { "zeal", NULL};
 static const char *pavucontrol[]  = { "pavucontrol", NULL};
 static const char *blueman_applet[]  = { "blueman-applet", NULL};
+static const char *porsmo[]  = { "alacritty", "-e", "porsmo", NULL};
 
 #include "selfrestart.c"
 
@@ -80,6 +81,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_z,      spawn,          {.v = zeal } },
         { MODKEY|ShiftMask,             XK_a,      spawn,          {.v = blueman_applet } },
         { MODKEY,                       XK_a,      spawn,          {.v = pavucontrol } },
+        { MODKEY|ShiftMask,             XK_p,      spawn,          {.v = porsmo } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
